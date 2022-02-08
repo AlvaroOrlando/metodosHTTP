@@ -8,7 +8,6 @@ const controller = {
         res.render('contato', {
             nomeUsuario:nome,
             title: "Home",
-            sexoUsuario: sexo
         })
     }
 };

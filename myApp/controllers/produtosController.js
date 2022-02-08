@@ -3,7 +3,6 @@ const produtosController = {
         res.render('produtos', {title: 'Produtos'})
     },
     
-
     criarProdutos: (req,res)=>{
         let produto ={
             nome: null,
@@ -17,7 +16,23 @@ const produtosController = {
                                preco:produto.preco
                             })
     },
-    
+
+    viewAttForm: (req,res)=>{
+        let {id} = req.params;
+        produtos = [
+            {id:1, nome:'Produto X', preco: 10},
+            {id:2, nome:'Produto Y', preco: 20},
+            {id:3, nome:'Produto Z', preco: 30}
+        ];
+''
+        res.render('editarProduto', {title:'Editar Produto', 
+                                     produto: produtos[id]});
+    },
+
+    editar: (req,res)=>{
+        let {nomeProduto,precoProduto} = req.body 
+        res.send("Produto " + nomeProduto + " editado com sucesso! Novo preço: " + precoProduto)
+    }
     
 }
 
