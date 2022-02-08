@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+</head>
+<body>
+    <h1>Digite seu nome!</h1>
+
+    <form action="/confirmarContato" method="GET">
+    <input type="text" name="nome"id="">
+
+    <br><br><br>
+    <div>
+        <h2>GÊNERO</h2>
+    <input type="radio" id="masculino" name="sexo" value="masculino" >
+    <label for="masculino">MASCULINO</label>
+    </div>
+    <div>
+        <input type="radio" id="feminino" name="sexo" value="feminino" >
+        <label for="feminino">FEMININO</label>
+    </div>
+    <br>
+    <button type="submit">Enviar</button>
+    </form>
+</body>
+</html>
